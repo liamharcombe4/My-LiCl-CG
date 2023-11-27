@@ -19,7 +19,7 @@ export nline=$nline_per_set
 
 split coord.raw	 -l $nline_per_set -d -a 3 coord.raw
 test -f energy.raw && split energy.raw -l $nline_per_set -d -a 3 energy.raw
-test -f force.raw  && split force.raw  -l $nline_per_set -d -a 3 force.raw
+test -f coordNoisy.raw  && split coordNoisy.raw  -l $nline_per_set -d -a 3 coordNoisy.raw
 test -f virial.raw && split virial.raw -l $nline_per_set -d -a 3 virial.raw
 test -f atom_ener.raw && split atom_ener.raw -l $nline_per_set -d -a 3 atom_ener.raw
 test -f fparam.raw && split fparam.raw -l $nline_per_set -d -a 3 fparam.raw
@@ -36,7 +36,7 @@ do
   mkdir set.$pi
   mv coord.raw$pi	set.$pi/coord.raw
   test -f energy.raw$pi && mv energy.raw$pi set.$pi/energy.raw
-  test -f force.raw$pi  && mv force.raw$pi  set.$pi/force.raw
+  test -f coordNoisy.raw$pi  && mv coordNoisy.raw$pi  set.$pi/coordNoisy.raw
   test -f virial.raw$pi && mv virial.raw$pi set.$pi/virial.raw
   test -f atom_ener.raw$pi && mv atom_ener.raw$pi set.$pi/atom_ener.raw
   test -f fparam.raw$pi && mv fparam.raw$pi set.$pi/fparam.raw
@@ -55,8 +55,8 @@ if os.path.isfile("energy.raw"):
 '
   python3 -c \
 'import numpy as np; import os; 
-if os.path.isfile("force.raw" ): 
-   data = np.loadtxt("force.raw", ndmin = 2); 
+if os.path.isfile("coordNoisy.raw" ): 
+   data = np.loadtxt("coordNoisy.raw", ndmin = 2); 
    data = data.astype (np.float32);
    data = data.reshape(int(os.environ["nline"]),data.shape[1]//3,3);
    np.save ("F",  data)
