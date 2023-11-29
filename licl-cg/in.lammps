@@ -22,13 +22,13 @@ velocity        all create 300.0 23456789
 # pair_coeff  * * coul/long
 # pair_coeff * *  nequip  training/results/default_LiCl/licl-deployted.pth  Li Cl
 
-pair_style hybrid/scaled 0.01 nequip 1.0 coul/long 10.0
-pair_coeff * * nequip training/results/default_LiCl/licl-deployted.pth Li Cl
-pair_coeff * * coul/long
+# pair_style hybrid/scaled 0.01 nequip 1.0 coul/long 10.0
+# pair_coeff * * nequip training/results/default_LiCl/licl-deployted.pth Li Cl
+# pair_coeff * * coul/long
 
 
-# pair_style  hybrid/scaled 0.01  nequip
-# pair_coeff * *  nequip  training/results/default_LiCl/licl-deployted.pth  Li Cl
+pair_style  hybrid nequip
+pair_coeff * *  nequip  training/results/default_LiCl/licl-deployted.pth  Li Cl
 
 
 
