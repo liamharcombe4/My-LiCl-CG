@@ -12,7 +12,7 @@ append: true                                                                    
 default_dtype: float32                                                            # type of float to use, e.g. float32 and float64
 
 # network
-r_max: 0.0                                                                        # cutoff radius in length units, here Angstrom, this is an important hyperparamter to scan
+r_max: 10.0                                                                        # cutoff radius in length units, here Angstrom, this is an important hyperparamter to scan
 num_layers: 3                                                                     # number of interaction blocks, we find 4-6 to work best
 l_max: 1                                                                          # the maximum irrep order (rotation order) for the network's features, l=1 is a good default, l=2 is more accurate but slower
 parity: false                                                                      # whether to include features with odd mirror parity; often turning parity off gives equally good results but faster networks, so do consider this
