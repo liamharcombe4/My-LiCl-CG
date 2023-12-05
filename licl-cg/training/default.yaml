@@ -79,8 +79,8 @@ save_checkpoint_freq: -1                                                        
 save_ema_checkpoint_freq: -1                                                       # frequency to save the intermediate ema checkpoint. no saving when the value is not positive.
 
 # training
-n_train: 1600                                                                       # number of training data
-n_val: 400
+n_train: 2400                                                                       # number of training data
+n_val: 600
 # number of validation data
 learning_rate: 0.008                                                               # learning rate, we found values between 0.01 and 0.005 to work best - this is often one of the most important hyperparameters to tune
 batch_size: 5
