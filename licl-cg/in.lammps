@@ -48,4 +48,4 @@ dump_modify     1 element Li Cl
 restart 	50000 restartfile1 restartfile2
 
 
-run             200000
+run             100000
