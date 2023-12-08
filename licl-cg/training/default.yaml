@@ -82,7 +82,7 @@ save_ema_checkpoint_freq: -1                                                    
 n_train: 2400                                                                       # number of training data
 n_val: 600
 # number of validation data
-learning_rate: 0.008                                                               # learning rate, we found values between 0.01 and 0.005 to work best - this is often one of the most important hyperparameters to tune
+learning_rate: 0.01                                                               # learning rate, we found values between 0.01 and 0.005 to work best - this is often one of the most important hyperparameters to tune
 batch_size: 5
 validation_batch_size: 100 
 max_epochs: 10000                                                                 # stop training after _ number of epochs, we set a very large number here, it won't take this long in practice and we will use early stopping instead
