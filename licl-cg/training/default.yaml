@@ -103,10 +103,10 @@ early_stopping_lower_bounds:                                                    
 # loss function
 loss_coeffs:                                                                       # different weights to use in a weighted loss functions
   forces:
-    - 100
+    - 1
     - PerSpeciesMSELoss                                                                       # for MD applications, we recommed a force weight of 100 and an energy weight of 1
   total_energy:                                                                    # alternatively, if energies are not of importance, a force weight 1 and an energy weight of 0 also works.
-    - 1.0
+    - 0
     - PerAtomMSELoss
 
 # output metrics
