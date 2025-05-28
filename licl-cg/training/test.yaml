@@ -1,0 +1,26 @@
+# LiCl-CG/licl-cg/training/test.yaml
+root: ./trainingdata/test
+dataset: npz
+dataset_file_name: /content/LiCl-CG/licl-cg/training/trainingdata/test/dataLiCl.npz
+key_mapping:
+  z: atomic_numbers                                                                # atomic species, integers              
+  E: total_energy                                                                  # total potential eneriges to train to
+  F: forces                                                                        # atomic forces to train to
+  R: pos                                                                           # raw atomic positions
+  pbc: pbc
+  cell: cell
+npz_fixed_field_keys:                                                              # fields that are repeated across different examples
+  - atomic_numbers
+  - pbc
+  - cell
+
+# A mapping of chemical species to type indexes is necessary if the dataset is provided with atomic numbers instead of type indexes.
+chemical_symbol_to_type:
+#  O: 0
+#  H: 1
+  Li: 0
+  Cl: 1
+
+
+# you can also set batch_size here if you want:
+batch_size: 5
